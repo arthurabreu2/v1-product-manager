@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  app:
+    container_name: product_manager-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200" # Angular server
+      - "3001:3001" # JSON Server
+    volumes:
+      - .:/app
+      - /app/node_modules 
+    environment:
+      - NODE_ENV=development
+    command: npm run start:all
+    stdin_open: true
+    tty: true

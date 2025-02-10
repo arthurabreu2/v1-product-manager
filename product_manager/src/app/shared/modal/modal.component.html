@@ -1,0 +1,59 @@
+<div *ngIf="isOpen" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-md" @fadeAnimation>
+    <div class="relative p-6 w-full max-w-md bg-white rounded-lg shadow-lg transform transition-transform scale-95" @fadeInOut>
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-4 border-b border-gray-200">
+        <h3 class="text-lg font-semibold text-gray-900">{{ title }}</h3>
+        <button (click)="onClose()" class="text-gray-500 hover:bg-gray-200 rounded-sm p-2">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7l-6 6"/>
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Modal Body -->
+      <div class="p-4">
+        <form (ngSubmit)="onSubmit()">
+          <div class="grid gap-4 mb-4 grid-cols-2">
+            <div class="col-span-2">
+              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
+              <input type="text" id="name" [(ngModel)]="formData.name" name="name"
+                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-900 focus:border-gray-900 block w-full p-2.5"
+                     placeholder="Type product name" required>
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label for="price" class="block mb-2 text-sm font-medium text-gray-900">Price</label>
+              <input type="number" id="price" [(ngModel)]="formData.price" name="price"
+                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-900 focus:border-gray-900 block w-full p-2.5"
+                     placeholder="$2999" required>
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Category</label>
+              <select id="category" [(ngModel)]="formData.category" name="category"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-900 focus:border-gray-900 block w-full p-2.5">
+                <option value="Geladeira">Geladeira</option>
+                <option value="Maquina de lavar">Maquina de lavar</option>
+                <option value="Fogão">Fogão</option>
+                <option value="Micro-ondas">Micro-ondas</option>
+                <option value="Forno">Forno</option>
+                <option value="Portáteis">Portáteis</option>
+              </select>
+            </div>
+            <div class="col-span-2">
+              <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
+              <textarea id="description" rows="4" [(ngModel)]="formData.description" name="description"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                        placeholder="Write product description here"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 transition delay-100 duration-300 ease-in-out hover:scale-105 hover:shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400"
+                viewBox="0 0 20 20" fill="currentColor">
+                <path class="cls-1" d="M.5 8.5v-1h15v1z" />
+                <path class="cls-1" d="M8.5 15.5h-1V.5h1z" />
+            </svg>Novo produto
+          </button>
+        </form>
+      </div>
+    </div>
+</div>

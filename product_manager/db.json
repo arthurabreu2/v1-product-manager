@@ -1,0 +1,385 @@
+{
+  "products-test": [
+    {
+      "id": "1",
+      "name": "Forno Multifuncional Electrolux",
+      "price": 899.99,
+      "category": "Forno",
+      "description": "Forno multifuncional, ideal para uma variedade de receitas e preparos."
+    },
+    {
+      "id": "2",
+      "name": "Geladeira Compacta Electrolux",
+      "price": 1999.99,
+      "category": "Geladeira",
+      "description": "Geladeira compacta, ideal para apartamentos e ambientes pequenos, com alta eficiência."
+    },
+    {
+      "id": "3",
+      "name": "Mixer 2.0",
+      "price": 459,
+      "category": "Portáteis",
+      "description": "Mixer portátil acrilico "
+    },
+    {
+      "id": "4",
+      "name": "Máquina de Lavar Roupas Electrolux Smart",
+      "price": 2699.99,
+      "category": "Maquina de lavar",
+      "description": "Conectada e inteligente, com recursos de automação e monitoramento remoto."
+    },
+    {
+      "id": "5",
+      "name": "Fogão Electrolux Inox",
+      "price": 1199.99,
+      "category": "Fogão",
+      "description": "Fogão em inox, durável e com acabamento premium para sua cozinha."
+    },
+    {
+      "id": "6",
+      "name": "Liquidificador Electrolux",
+      "price": 299.9,
+      "category": "Portáteis",
+      "description": "Liquidificador com motor de alta performance, ideal para sucos, vitaminas e smoothies."
+    },
+    {
+      "id": "7",
+      "name": "Máquina de Lavar Roupas Electrolux 12kg",
+      "price": 1999.9,
+      "category": "Maquina de lavar",
+      "description": "Máquina de lavar com capacidade de 12kg, diversos ciclos e alta eficiência."
+    },
+    {
+      "id": "8",
+      "name": "Processador de Alimentos Portátil Electrolux",
+      "price": 449.99,
+      "category": "Portáteis",
+      "description": "Processador de alimentos portátil, perfeito para triturar e misturar ingredientes com facilidade."
+    },
+    {
+      "id": "9",
+      "name": "Geladeira Inverse Electrolux",
+      "price": 3199.99,
+      "category": "Geladeira",
+      "description": "Geladeira inverse com compartimentos inteligentes para otimizar o armazenamento."
+    },
+    {
+      "id": "10",
+      "name": "Micro-ondas Electrolux Grill 30L",
+      "price": 529.99,
+      "category": "Micro-ondas",
+      "description": "Com função grill, ideal para gratinar e preparar pratos diversos."
+    },
+    {
+      "id": "11",
+      "name": "Geladeira Electrolux Duplex",
+      "price": 2999.99,
+      "category": "Geladeira",
+      "description": "Geladeira duplex com compartimentos bem distribuídos, ideal para famílias grandes e com tecnologia de refrigeração avançada."
+    },
+    {
+      "id": "12",
+      "name": "Cafeteira Electrolux",
+      "price": 299.99,
+      "category": "Portáteis",
+      "description": "Cafeteira com design moderno e funções programáveis para um café sempre fresco."
+    },
+    {
+      "id": "13",
+      "name": "Micro-ondas Electrolux Inverter 35L",
+      "price": 599.99,
+      "category": "Micro-ondas",
+      "description": "Tecnologia inverter para melhor distribuição de calor e eficiência energética."
+    },
+    {
+      "id": "14",
+      "name": "Máquina de Lavar Roupas Electrolux Inverter",
+      "price": 2299.99,
+      "category": "Maquina de lavar",
+      "description": "Tecnologia inverter para maior economia de energia e desempenho superior."
+    },
+    {
+      "id": "15",
+      "name": "Mini Forno Portátil Electrolux",
+      "price": 349.99,
+      "category": "Portáteis",
+      "description": "Mini forno portátil, ideal para pequenas porções e uso doméstico."
+    },
+    {
+      "id": "16",
+      "name": "Forno a Gás Electrolux",
+      "price": 699.99,
+      "category": "Forno",
+      "description": "Forno a gás, eficiente e com controle preciso de temperatura."
+    },
+    {
+      "id": "17",
+      "name": "Produto",
+      "price": 400,
+      "category": "Portáteis",
+      "description": "teste"
+    },
+    {
+      "id": "18",
+      "name": "Air Fryer Electrolux",
+      "price": 499.99,
+      "category": "Portáteis",
+      "description": "Air fryer para frituras saudáveis, com tecnologia que reduz o uso de óleo."
+    },
+    {
+      "id": "19",
+      "name": "Máquina de Lavar Roupas Electrolux Front Load",
+      "price": 2599.99,
+      "category": "Maquina de lavar",
+      "description": "Front load com performance avançada e diversas opções de lavagem."
+    },
+    {
+      "id": "20",
+      "name": "Geladeira French Door Electrolux",
+      "price": 3999.99,
+      "category": "Geladeira",
+      "description": "Geladeira French door com tecnologia avançada e design premium."
+    },
+    {
+      "id": "21",
+      "name": "Forno Digital Electrolux",
+      "price": 949.99,
+      "category": "Forno",
+      "description": "Forno digital com painel touch para controle preciso e intuitivo."
+    },
+    {
+      "id": "22",
+      "name": "Máquina de Lavar Roupas Electrolux 8kg",
+      "price": 1499.99,
+      "category": "Maquina de lavar",
+      "description": "Modelo compacto, ideal para pequenas famílias e com consumo eficiente de água."
+    },
+    {
+      "id": "23",
+      "name": "Geladeira Side by Side Electrolux",
+      "price": 3499.99,
+      "category": "Geladeira",
+      "description": "Geladeira side by side com design sofisticado e alta capacidade de armazenamento."
+    },
+    {
+      "id": "24",
+      "name": "Fogão Electrolux Gás Natural",
+      "price": 1099.9,
+      "category": "Fogão",
+      "description": "Fogão a gás natural com alta performance e controle preciso da chama."
+    },
+    {
+      "id": "25",
+      "name": "Forno Combi Electrolux",
+      "price": 999.99,
+      "category": "Forno",
+      "description": "Forno combi com diversas funções e alta capacidade de preparo."
+    },
+    {
+      "id": "26",
+      "name": "Produto teste",
+      "price": 499,
+      "category": "Micro-ondas",
+      "description": "Descrição de um produto teste"
+    },
+    {
+      "id": "27",
+      "name": "Geladeira Frost Free Electrolux",
+      "price": 2799.99,
+      "category": "Geladeira",
+      "description": "Geladeira frost free com tecnologia inovadora para melhor conservação dos alimentos."
+    },
+    {
+      "id": "28",
+      "name": "Grill Portátil Electrolux",
+      "price": 399.99,
+      "category": "Portáteis",
+      "description": "Grill portátil para grelhar carnes e vegetais de forma prática em casa."
+    },
+    {
+      "id": "29",
+      "name": "Fogão Electrolux Duplo Forno",
+      "price": 1299.99,
+      "category": "Fogão",
+      "description": "Duplo forno para maior versatilidade no preparo de diversos pratos."
+    },
+    {
+      "id": "30",
+      "name": "Fogão Electrolux 4 Bocas",
+      "price": 899.9,
+      "category": "Fogão",
+      "description": "Fogão com 4 bocas, design moderno e alta eficiência para preparo de refeições."
+    },
+    {
+      "id": "31",
+      "name": "Micro-ondas Electrolux 25L",
+      "price": 449.99,
+      "category": "Micro-ondas",
+      "description": "Modelo compacto de 25 litros, perfeito para cozinhas com pouco espaço."
+    },
+    {
+      "id": "32",
+      "name": "Máquina de Lavar Roupas Electrolux Top Load",
+      "price": 1899.99,
+      "category": "Maquina de lavar",
+      "description": "Modelo top load, fácil de usar e com manutenção prática."
+    },
+    {
+      "id": "33",
+      "name": "Aspirador de Pó Electrolux",
+      "price": 399.99,
+      "category": "Portáteis",
+      "description": "Aspirador de pó com alta potência e filtro HEPA para uma limpeza eficiente."
+    },
+    {
+      "id": "34",
+      "name": "Mixer Portátil Electrolux",
+      "price": 199.99,
+      "category": "Portáteis",
+      "description": "Mixer portátil ideal para batidos, molhos e misturas rápidas."
+    },
+    {
+      "id": "35",
+      "name": "Micro-ondas Electrolux Digital 30L",
+      "price": 499.99,
+      "category": "Micro-ondas",
+      "description": "Digital com múltiplas funções e fácil programação, com 30 litros de capacidade."
+    },
+    {
+      "id": "36",
+      "name": "Fogão Electrolux 5 Bocas",
+      "price": 999.9,
+      "category": "Fogão",
+      "description": "Fogão com 5 bocas, ideal para famílias grandes e com recursos modernos."
+    },
+    {
+      "id": "37",
+      "name": "Sanduicheira Portátil Electrolux",
+      "price": 249.99,
+      "category": "Portáteis",
+      "description": "Sanduicheira portátil com placas antiaderentes para preparo rápido e uniforme."
+    },
+    {
+      "id": "38",
+      "name": "Forno Elétrico Electrolux",
+      "price": 799.99,
+      "category": "Forno",
+      "description": "Forno elétrico com funções de grill e convecção, perfeito para assados e preparos variados."
+    },
+    {
+      "id": "39",
+      "name": "Micro-ondas Electrolux 30L",
+      "price": 499,
+      "category": "Micro-ondas",
+      "description": "Micro-ondas com capacidade de 30 litros, ideal para preparo rápido de refeições."
+    },
+    {
+      "id": "40",
+      "name": "Panela Elétrica Electrolux",
+      "price": 299.99,
+      "category": "Portáteis",
+      "description": "Panela elétrica com múltiplas funções e fácil programação para preparar refeições."
+    },
+    {
+      "id": "41",
+      "name": "Fogão Electrolux Elétrico",
+      "price": 999.99,
+      "category": "Fogão",
+      "description": "Modelo elétrico, com design moderno e segurança operacional."
+    },
+    {
+      "id": "42",
+      "name": "Forno Convecção Electrolux",
+      "price": 849.99,
+      "category": "Forno",
+      "description": "Forno com convecção para assados mais uniformes e saborosos."
+    },
+    {
+      "id": "43",
+      "name": "Micro-ondas Electrolux Compacto 20L",
+      "price": 399.99,
+      "category": "Micro-ondas",
+      "description": "Ideal para cozinhas pequenas, com 20 litros de capacidade e design moderno."
+    },
+    {
+      "id": 44,
+      "name": "Tste",
+      "price": 200,
+      "category": "Forno",
+      "description": "TEste"
+    },
+    {
+      "id": 44
+    },
+    {
+      "id": 45,
+      "name": "Teste",
+      "price": 200,
+      "category": "Micro-ondas",
+      "description": "teste"
+    },
+    {
+      "id": 45
+    },
+    {
+      "id": 46,
+      "name": "Test",
+      "price": 222,
+      "category": "Forno",
+      "description": "Teste"
+    },
+    {
+      "id": 46
+    },
+    {
+      "id": 47,
+      "name": "test",
+      "price": 2,
+      "category": "",
+      "description": ""
+    },
+    {
+      "id": 47
+    },
+    {
+      "id": 48,
+      "name": "a",
+      "price": "",
+      "category": "",
+      "description": ""
+    },
+    {
+      "id": 48
+    },
+    {
+      "id": 49,
+      "name": "",
+      "price": "",
+      "category": "",
+      "description": ""
+    },
+    {
+      "id": 49
+    },
+    {
+      "id": 50,
+      "name": "",
+      "price": "",
+      "category": "",
+      "description": ""
+    },
+    {
+      "id": 50
+    },
+    {
+      "id": 51,
+      "name": "",
+      "price": "",
+      "category": "",
+      "description": ""
+    },
+    {
+      "id": 51
+    }
+  ]
+}

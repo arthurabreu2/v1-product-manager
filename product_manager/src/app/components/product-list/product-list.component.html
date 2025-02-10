@@ -1,0 +1,211 @@
+<div class="flex items-center gap-2 pt-20 pl-24 pb-12">
+    <h3 class="text-lg font-semibold text-slate-900">Filtro por Categoria</h3>
+    <svg class="w-6 h-6 text-slate-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L15 12.414V19a1 1 0 01-.447.832l-4 2A1 1 0 019 21v-8.586L3.293 6.707A1 1 0 013 6V4z" />
+    </svg>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-2 sm:gap-6 p-24 pt-0 justify-center">
+    <!-- Botões de categoria -->
+    <a *ngFor="let category of categories" (click)="toggleCategory(category)"
+        [class.bg-slate-900]="selectedCategory === category" [class.text-white]="selectedCategory === category"
+        [class.bg-white]="selectedCategory !== category" [class.text-gray-700]="selectedCategory !== category"
+        class="h-12 border border-slate-50 rounded-md shadow-md hover:shadow-xl transition delay-100 duration-300 ease-in-out scale-100 hover:scale-105 flex items-center justify-center cursor-pointer">
+        <h5 class="text-sm font-light uppercase">{{ category }}</h5>
+    </a>
+
+    <!-- Botão para resetar o filtro -->
+    <a (click)="resetCategoryFilter()" [class.bg-slate-900]="!selectedCategory" [class.text-white]="!selectedCategory"
+        [class.bg-white]="selectedCategory" [class.text-gray-700]="selectedCategory"
+        class="h-12 border border-slate-50 rounded-md shadow-md hover:shadow-xl transition delay-100 duration-300 ease-in-out scale-100 hover:scale-105 flex items-center justify-center cursor-pointer">
+        <h5 class="text-sm font-light uppercase">Todos</h5>
+    </a>
+</div>
+
+<section class="bg-white p-3 sm:p-5">
+    <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
+        <div class="bg-white relative shadow-xl rounded-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
+                <div class="w-full md:w-1/2">
+                    <form class="flex items-center">
+                        <label for="simple-search" class="sr-only">Search</label>
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-400 dark:text-gray-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <input type="text" id="simple-search" name="searchTerm" [(ngModel)]="searchTerm"
+                                (input)="applyFilter()" class="bg-gray-50 border border-slate-50 text-gray-900 text-sm rounded-sm focus:border-white 
+                    block w-full pl-10 p-2 dark:border-slate-50 dark:placeholder-gray-400 dark:text-gray-700 
+                    dark:focus:ring-slate-700 dark:focus:border-slate-700" placeholder="Search by name...">
+                        </div>
+                    </form>
+                </div>
+                <div
+                    class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:m-5 flex-shrink-0">
+                    <button (click)="openModal()"
+                        class="w-full md:w-auto md:m-3 flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 transition delay-100 duration-300 ease-in-out hover:scale-105 hover:shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path class="cls-1" d="M.5 8.5v-1h15v1z" />
+                            <path class="cls-1" d="M8.5 15.5h-1V.5h1z" />
+                        </svg>
+                        Novo produto
+                    </button>
+
+                    <app-modal [isOpen]="isModalOpen" [title]="'Adicionar novo produto'" (close)="closeModal()"
+                        (submit)="saveProduct($event)">
+                    </app-modal>
+
+                </div>
+            </div>
+
+            <div id="successModal" tabindex="-1" aria-hidden="true" [ngClass]="{
+    'hidden opacity-0 scale-95': !isSuccessModalOpen,
+    'flex opacity-100 scale-100': isSuccessModalOpen
+  }" class="fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full backdrop-blur-sm bg-gray-900 bg-opacity-50 transition-all duration-2000 ease-in-out">
+                <div class="relative p-4 w-full max-w-md h-auto">
+                    <!-- Modal content -->
+                    <div class="relative p-6 text-center bg-white rounded-lg shadow sm:p-8">
+                        <button type="button"
+                            class="text-gray-400 absolute top-3 right-3 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex items-center"
+                            (click)="closeSuccessModal()">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Fechar</span>
+                        </button>
+                        <div
+                            class="w-12 h-12 rounded-full bg-green-100 p-2 flex items-center justify-center mx-auto mb-4">
+                            <svg aria-hidden="true" class="w-8 h-8 text-green-500" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Sucesso</span>
+                        </div>
+                        <p class="mb-5 text-lg font-semibold text-gray-900">
+                            Produto salvo com sucesso!
+                        </p>
+                        <button type="button"
+                            class="py-2 px-4 text-sm font-medium text-center text-white rounded-lg bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300"
+                            (click)="closeSuccessModal()">
+                            Continuar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-slate-900 dark:text-gray-200">
+                        <tr>
+                            <th scope="col" class="px-4 py-3">Nome do produto</th>
+                            <th scope="col" class="px-4 py-3">Categoria</th>
+                            <th scope="col" class="px-4 py-3">Preço</th>
+                            <th scope="col" class="px-4 py-3 text-center">Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Itera sobre produtos -->
+                        <tr *ngFor="let product of paginatedProducts"
+                            class="border-b text-gray-900 dark:border-gray-700">
+                            <th scope="row" class="px-4 py-3 font-medium whitespace-nowrap">
+                                {{ product.name }}
+                            </th>
+                            <td class="px-4 py-3">
+                                {{ product.category }}
+                            </td>
+                            <td class="px-4 py-3">
+                                ${{ product.price }}
+                            </td>
+                            <td class="px-4 py-3 text-center">
+                                <button (click)="openProductModal(product)"
+                                    class="inline-flex items-center justify-center w-8 h-8 text-white bg-slate-900 rounded-full shadow-lg hover:bg-slate-700 focus:outline-none transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"></path>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Modal Product Description -->
+            <div id="product-modal" tabindex="-1" [ngClass]="{
+                    'opacity-0 pointer-events-none': !isModalProductOpen,
+                    'opacity-100 pointer-events-auto': isModalProductOpen
+                }"
+                class="fixed inset-0 z-50 flex items-center justify-center w-full h-full p-4 bg-gray-500 bg-opacity-50 transition-all duration-300 ease-in-out backdrop-blur-md">
+
+                <div
+                    class="relative w-full max-w-lg bg-white rounded-lg shadow-lg transform transition-transform duration-300 ease-in-out">
+
+                    <!-- Modal Header -->
+                    <div class="flex items-center justify-between p-5 border-b border-gray-200 rounded-t">
+                        <h3 class="text-lg font-medium text-gray-900">Descrição do produto</h3>
+                        <button (click)="closeProductModal()" type="button"
+                            class="text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-full p-2">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1l6 6m0 0l6-6M7 7l-6 6m6-6l6 6" />
+                            </svg>
+                            <span class="sr-only">Fechar</span>
+                        </button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="p-5">
+                        <p class="text-base text-gray-600">
+                            {{ selectedProduct?.description || 'No description available.' }}
+                        </p>
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="flex items-center justify-end p-4 border-t border-gray-200 rounded-b">
+                        <button (click)="closeProductModal()" type="button"
+                            class="px-5 py-2 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-700 focus:outline-none focus:ring-4 focus:ring-slate-300 transition-all duration-300 ease-in-out">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="flex justify-center items-center space-x-2 p-4" aria-label="Pagination">
+                <button (click)="previousPage()" [disabled]="currentPage === 1"
+                    class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-sm text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span>&lt;</span>
+                </button>
+
+                <button *ngFor="let page of [].constructor(Math.ceil(totalItems / itemsPerPage)); let i = index"
+                    (click)="goToPage(i + 1)" [class.bg-gray-200]="currentPage === i + 1"
+                    [class.text-gray-800]="currentPage === i + 1"
+                    class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-sm text-gray-600 hover:bg-gray-100 transition">
+                    {{ i + 1 }}
+                </button>
+
+                <button (click)="nextPage()" [disabled]="currentPage === Math.ceil(totalItems / itemsPerPage)"
+                    class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-sm text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span>&gt;</span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</section>
