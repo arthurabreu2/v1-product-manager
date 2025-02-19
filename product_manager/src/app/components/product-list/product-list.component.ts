@@ -153,20 +153,34 @@ export class ProductListComponent {
 
 
   saveProduct(product: any) {
+    // Validação: impede envio de produto vazio
+    if (!product.name || !product.price || !product.category || !product.description) {
+      console.warn("Preencha todos os campos antes de salvar o produto.");
+      return;
+    }
+
     const newProduct = {
-      id: this.products.length > 0 ? Math.max(...this.products.map(p => p.id)) + 1 : 1,
       name: product.name,
       price: product.price,
       category: product.category,
       description: product.description
     };
 
-    this.http.post(this.apiUrl, newProduct).subscribe(() => {
-      this.loadProducts();
-      this.closeModal();
-      this.openSuccessModal();
+    console.log("Enviando produto:", newProduct);
+
+    this.http.post(this.apiUrl, newProduct).subscribe({
+      next: (response) => {
+        console.log("Produto salvo com sucesso:", response);
+        this.loadProducts();
+        this.closeModal();
+        this.openSuccessModal();
+      },
+      error: (err) => {
+        console.error("Erro ao salvar produto:", err);
+      }
     });
   }
+
 
   openSuccessModal() {
     this.isSuccessModalOpen = true;

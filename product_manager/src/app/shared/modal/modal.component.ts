@@ -54,4 +54,5 @@ export class ModalComponent {
     this.submit.emit(this.formData);
     this.onClose();
   }
+
 }

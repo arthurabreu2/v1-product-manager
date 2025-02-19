@@ -309,17 +309,11 @@
       "description": "TEste"
     },
     {
-      "id": "44"
-    },
-    {
       "id": "45",
       "name": "Teste",
       "price": 200,
       "category": "Micro-ondas",
       "description": "teste"
-    },
-    {
-      "id": "45"
     },
     {
       "id": "46",
@@ -329,67 +323,11 @@
       "description": "Teste"
     },
     {
-      "id": "46"
-    },
-    {
-      "id": "47",
-      "name": "test",
-      "price": 2,
-      "category": "",
-      "description": ""
-    },
-    {
-      "id": "47"
-    },
-    {
-      "id": "48",
-      "name": "a",
-      "price": "",
-      "category": "",
-      "description": ""
-    },
-    {
-      "id": "48"
-    },
-    {
-      "id": "49",
-      "name": "",
-      "price": "",
-      "category": "",
-      "description": ""
-    },
-    {
-      "id": "49"
-    },
-    {
-      "id": "50",
-      "name": "",
-      "price": "",
-      "category": "",
-      "description": ""
-    },
-    {
-      "id": "50"
-    },
-    {
-      "id": "51",
-      "name": "",
-      "price": "",
-      "category": "",
-      "description": ""
-    },
-    {
-      "id": "51"
-    },
-    {
-      "id": 52,
+      "id": "52",
       "name": "Teste",
       "price": 800,
       "category": "Micro-ondas",
       "description": "Teste"
-    },
-    {
-      "id": 52
     }
   ]
 }
