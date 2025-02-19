@@ -38,14 +38,19 @@ Você pode rodar o projeto localmente de duas maneiras: **sem Docker** ou **com 
    git clone https://github.com/arthurabreu2/v1-product-manager.git
    cd v1-product-manager/product_manager/
    ```
+2. **Navegue até o projeto:**
 
-2. **Instale as dependências:**
+   ```bash
+   cd v1-product-manager/product_manager/
+   ```
+
+3. **Instale as dependências:**
 
    ```bash
    npm install
    ```
 
-3. **Rodar a aplicação e a API simultaneamente** *(método recomendado)*:
+4. **Rodar a aplicação e a API simultaneamente** *(método recomendado)*:
 
    ```bash
    npm run start:all
@@ -53,7 +58,7 @@ Você pode rodar o projeto localmente de duas maneiras: **sem Docker** ou **com 
 
    Esse comando inicia o **json-server** (API na porta **3001**) e o **servidor Angular** (porta **4200**) ao mesmo tempo.
 
-4. **Rodar manualmente em dois terminais** *(opcional)*:
+5. **Rodar manualmente em dois terminais** *(opcional)*:
    - Em um terminal, inicie a API:
 
      ```bash
@@ -68,7 +73,7 @@ Você pode rodar o projeto localmente de duas maneiras: **sem Docker** ou **com 
 
    A aplicação será aberta (ou você pode acessar via `http://localhost:4200/`).
 
-5. **Utilização:**
+6. **Utilização:**
    - Use o campo de busca e os botões de categoria para filtrar os produtos.
    - Clique em “Add product” para abrir o modal e cadastrar um novo produto.
    - Clique no botão de “More Info” para visualizar a descrição completa do produto.
