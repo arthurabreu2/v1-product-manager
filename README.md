@@ -36,7 +36,6 @@ Você pode rodar o projeto localmente de duas maneiras: **sem Docker** ou **com 
 
    ```bash
    git clone https://github.com/arthurabreu2/v1-product-manager.git
-   cd v1-product-manager/product_manager/
    ```
 2. **Navegue até o projeto:**
 
