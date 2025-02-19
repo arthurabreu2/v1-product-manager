@@ -42,7 +42,7 @@ testem.log
 Thumbs.db
 
 
-product_manager/node_modules/
+node_modules/
 product_manager/dist/
 product_manager/out-tsc/
 product_manager/.angular
